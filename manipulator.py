@@ -8,14 +8,9 @@ class Manipulator():
         self.filename = filename
         self.image = Image.open(filename)
 
-    def get_color(self):
-        color_thief = ColorThief(self.filename)
-        dominant_color = color_thief.get_color(quality=1)
-        return dominant_color
-
-    def change_color(self, color):
-        fromColor = self.get_color()
-        toColor = struct.unpack('BBB', bytes.fromhex(color))
+    def change_color(self, fromColor, toColor):
+        fromColor = struct.unpack('BBB', bytes.fromhex(fromColor))
+        toColor = struct.unpack('BBB', bytes.fromhex(toColor))
         deltaRank = 10
 
         img = self.image
