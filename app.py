@@ -1,7 +1,5 @@
 from manipulator import Manipulator
-from flask import Flask, request, send_file
-from io import BytesIO
-from PIL import Image
+from flask import Flask, request
 import random
 import string
 import base64

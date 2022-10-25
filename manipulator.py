@@ -1,4 +1,3 @@
-from colorthief import ColorThief
 from PIL import Image
 import struct
 
